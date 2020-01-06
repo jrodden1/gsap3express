@@ -15,7 +15,7 @@ gsap.fromTo()
 // next is the vars object ({x:750, duration:3}) that contains the properties we are animating and a special series of properties that tell us how the tween is going to run (duration) .  Also note that the "x:" property is the shorthand for css translateX(750px) property
 
 // So Tweens can actually change multiple properties of a single object over time too.
-gsap.to(".star2", {x:750, scale:2, rotation: 360, fill: "purple", duration:3})
+gsap.to(".star2", {x:750, rotation: 360, fill: "purple", duration:3})
 
 // Tweens can change multiple properties of multiple objects over time too!!! 
 // gsap.to(".star", {x:750, rotation:360, duration:3})
@@ -23,3 +23,9 @@ gsap.to(".star2", {x:750, scale:2, rotation: 360, fill: "purple", duration:3})
 
 // Tweens can animate multiple objects with staggered start times!! 
 gsap.to(".star", {stagger: .5, x:750, rotation:360, duration:3})
+
+// Now on to Timelines!  
+/* A Timeline is a container for multiple tweens */
+// More on this later... 
+
+// Also note that if no duration is specified in a tween, then gsap 3 defaults to 500ms (half a second)

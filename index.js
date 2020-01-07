@@ -29,3 +29,23 @@ gsap.to(".star", {stagger: .5, x:750, rotation:360, duration:3})
 // More on this later... 
 
 // Also note that if no duration is specified in a tween, then gsap 3 defaults to 500ms (half a second)
+// You can change the default duration (and anything else too) if you'd like using: 
+// gsap.defaults({duration:1})
+
+// For best performance use CSS Transforms and Opacity because they benefit from hardware acceleration
+/* Examples of properties that meet this criteria:
+x & y (translateX, translateY)
+rotation, rotationX, rotationY, rotationZ (for 3d)
+scaleX, scaleY or just 'scale'
+skewX, skewY
+opacity
+*/
+// you can animate any numeric property though.  
+// less performant but still doable examples:
+/* 
+width and height 
+top and left (make sure you set position: to 'relative', 'fixed', or 'absolute' first tho or it won't work)
+borderRadius (make sure css properties become camelCased)
+color / backgroundColor
+vh vw and much more! 
+*/

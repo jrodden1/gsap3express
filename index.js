@@ -24,9 +24,13 @@ gsap.to(".star2", {x:750, rotation: 360, fill: "purple", duration:3})
 // Tweens can animate multiple objects with staggered start times!! 
 gsap.to(".star", {stagger: .5, x:750, rotation:360, duration:3})
 
+// Let's do some "from"s and fromTo's
+gsap.from(".circle", {x:-100, opacity:.01, duration: 3})
+gsap.fromTo(".square", {x: 200}, {x:300, y:400, duration: 3})
+
 // Now on to Timelines!  
 /* A Timeline is a container for multiple tweens */
-// More on this later... 
+// More on this later actually... 
 
 // Also note that if no duration is specified in a tween, then gsap 3 defaults to 500ms (half a second)
 // You can change the default duration (and anything else too) if you'd like using: 

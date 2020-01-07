@@ -25,8 +25,20 @@ gsap.to(".star2", {x:750, rotation: 360, fill: "purple", duration:3})
 gsap.to(".star", {stagger: .5, x:750, rotation:360, duration:3})
 
 // Let's do some "from"s and fromTo's
-gsap.from(".circle", {x:-100, opacity:.01, duration: 3})
-gsap.fromTo(".square", {x: 200}, {x:300, y:400, duration: 3})
+gsap.from(".circle", {x: -100, opacity: .01, duration: 3})
+gsap.fromTo(".square", 
+   {x: 200, opacity: 0}, 
+   {
+      x: 300, 
+      y: 400, 
+      opacity: 1, 
+      scale: 3, 
+      duration: 3, 
+      yoyo: true, 
+      repeat: 4, 
+      repeatDelay: 2,
+      ease: "bounce.out"
+   })
 
 // Now on to Timelines!  
 /* A Timeline is a container for multiple tweens */

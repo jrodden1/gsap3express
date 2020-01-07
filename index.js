@@ -39,8 +39,23 @@ gsap.fromTo(".square",
       yoyo: true, 
       repeat: 4, 
       repeatDelay: 2,
-      ease: "bounce.out"
+      ease: "bounce"
    })
+
+//Special Properties
+// delay - typically only use this for simple 1 or two item animations; otherwise use a timeline
+// repeat - does the animation for how many times you want (-1 = forever)
+// yoyo - reverse the animation
+// ease - controls acceleration / decel of animations; in, inOut, out (out is implied)
+//    common ease: "back"
+//    eases are configurable -> ease:"back(6)" will really over shoot the end point to a power of 6
+//    default - out ease is default and slows on arriving
+
+// Reading Ease Curves - use the Ease Visualizer -> https://greensock.com/docs/v3/Eases
+// the steeper the curve, the faster the movement; shallower - slower
+// Eases dictate the direction of change as well (example: bounce- hits the target then comes back then goes back down again)
+
+
 // Also note that if no duration is specified in a tween, then gsap 3 defaults to 500ms (half a second)
 // You can change the default duration (and anything else too) if you'd like using: 
 // gsap.defaults({duration:1})
